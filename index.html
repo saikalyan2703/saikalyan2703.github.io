@@ -14,23 +14,38 @@
   #section1 {padding-top:50px;height:200px;}
   #section2 {padding-top:50px;height:800px;}
   #section3 {padding-top:50px;height:1500px;}
-  #section4 {padding-top:150px;height:2500px;}
-  #section4 {padding-top:150px;height:500px;}
+  #section4 {padding-top:50px;height:1500px;}
+  #section5 {padding-top:50px;height:600px;}
+  #section6 {padding-top:50px;height:700px;}
+  #section7 {padding-top:50px;height:500px;}
   </style>
   <script type="text/javascript">
     $(document).ready(function(){
        $("#knn-table").hide();
-      
+       $("#knn-analysis").hide();
+
       $("#knnbtn").click(function(){
         $("#knn-table").show();
         $("#neural-table").hide();
       });
 
 
+      $("#neuralrunbtn").click(function(){
+        $("#knn-analysis").hide();
+        $("#neural-analysis").show();
+      });
+
+
+      $("#knnrunbtn").click(function(){
+        $("#knn-analysis").show();
+        $("#neural-analysis").hide();
+      });
+
+
       $("#neuralbtn").click(function(){
         $("#knn-table").hide();
         $("#neural-table").show();
-      })
+      });
     })
   </script>
 </head>
@@ -54,6 +69,8 @@
           <li><a href="#section3">Team Members</a></li>
           <li><a href="#section4">Preprocessing</a></li>
           <li><a href="#section5">Algorithms</a></li>
+          <li><a href="#section6">Results</a></li>
+          <li><a href="#section7">Analysis</a></li>
         </ul>
       </div>
     </div>
@@ -272,10 +289,10 @@
 </div>
 
 <div id="section6" class="container-fluid">
-  <h1 class="col-md-offset-6">Results:</h1>
+  <h1 class="col-md-offset-5">Results:</h1>
 
  <div class="col-md-offset-2 col-md-8 well">
-  <div class="col-md-offset-4">
+  <div class="col-md-offset-3">
     <button id="knnbtn" class="btn btn-primary">Show KNN results</button>
      <button id="neuralbtn" class="btn btn-primary">Show Neural Network results</button>
   </div>
@@ -287,6 +304,26 @@
  <div id="neural-table" class="col-md-offset-4">
     <h2>Neural Network results:</h2>
     <img src="project_images/neural.jpg">
+ </div>
+ </div>
+</div>
+
+<div id="section7" class="container-fluid">
+  <h1 class="col-md-offset-5">Analysis:</h1>
+
+ <div class="col-md-offset-2 col-md-8 well">
+  <div class="col-md-offset-4">
+    <button id="knnrunbtn" class="btn btn-primary">Show KNN Analysis</button>
+     <button id="neuralrunbtn" class="btn btn-primary">Show Neural Network Analysis</button>
+  </div>
+   <div id="knn-analysis" class="col-md-offset-1">
+    <h2>KNN Analysis:</h2>
+    <img src="project_images/knn_run.jpg">
+ </div>
+
+ <div id="neural-analysis" class="col-md-offset-2">
+    <h2>Neural Network Analysis:</h2>
+    <img src="project_images/neural_run.jpg">
  </div>
  </div>
 </div>
