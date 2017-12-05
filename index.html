@@ -15,9 +15,10 @@
   #section2 {padding-top:50px;height:800px;}
   #section3 {padding-top:50px;height:1500px;}
   #section4 {padding-top:50px;height:1500px;}
-  #section5 {padding-top:50px;height:1700px;}
+  #section5 {padding-top:50px;height:1950px;}
   #section6 {padding-top:50px;height:700px;}
-  #section7 {padding-top:50px;height:500px;}
+  #section7 {padding-top:50px;height:1100px;}
+  #section8 {padding-top:50px;height: 500px;}
   </style>
   <script type="text/javascript">
     $(document).ready(function(){
@@ -71,6 +72,7 @@
           <li><a href="#section5">Algorithms</a></li>
           <li><a href="#section6">Results</a></li>
           <li><a href="#section7">Analysis</a></li>
+          <li><a href="#section8">References</a></li>
         </ul>
       </div>
     </div>
@@ -307,7 +309,7 @@
 
     <p><strong>Backward Propagation:  </strong>For backward propagation each output predicted is compared to the training label and the error is calculated and is used in gradient descent algorithm to improve the model.  The loss is used to learn the weights of the model.</p>
 
-    <h2 class="col-md-offset-4">Backward Propagation Formulas</h2>
+    <h3 class="col-md-offset-4">Backward Propagation Formulas:</h3>
 
     <div class="col-md-offset-5">
       <h4>loss=y(pred)-y</h4>
@@ -326,6 +328,10 @@
 
   <div class="col-md-offset-2 col-md-8 well">
     <h2 class="col-md-offset-4">K-Nearest Neighbours:</h2>
+    <p>K-NN classification, the output is a Classified based on the nearest neighbors to the given data point. For k=1 the classifier considers only single nearest data point to determine the class. For K=n point closer to the n data points in the dataset. It is best model to interpret the output, with less calculation times and best prediction power compared to different models. </p>
+    
+    <img class="col-md-offset-4" src="project_images/distances.jpg">
+    <p>For each image the distance using Euclidean distance and Manhattan distance for each training image is calculated and determine the nearest neighbors for each test data.</p>
  </div>
 </div>
 
@@ -357,15 +363,55 @@
     <button id="knnrunbtn" class="btn btn-primary">Show KNN Analysis</button>
      <button id="neuralrunbtn" class="btn btn-primary">Show Neural Network Analysis</button>
   </div>
-   <div id="knn-analysis" class="col-md-offset-1">
-    <h2>KNN Analysis:</h2>
-    <img src="project_images/knn_run.jpg">
+   <div id="knn-analysis">
+    <div class="col-md-offset-1">
+      <h2>KNN Analysis:</h2>
+      <img src="project_images/knn_run.jpg">
+    </div>
+
+    <h2 class="col-md-offset-4">K-Nearest Neighbours</h2>
+    <p>K-NN performed best for k=1 and number of images per class are 250 at 80% accuracy. As we increase the k values the accuracy reduced drastically.  Here is a sample output for k=1 and images per class=250.</p>
+    <img width="700" class="col-md-offset-2" src="project_images/knnrun.jpg">
  </div>
 
- <div id="neural-analysis" class="col-md-offset-2">
-    <h2>Neural Network Analysis:</h2>
-    <img src="project_images/neural_run.jpg">
+ <div id="neural-analysis" class="">
+    <div class="col-md-offset-2">
+      <h2>Neural Network Analysis:</h2>
+      <img src="project_images/neural_run.jpg">
+    </div>
+    <h2 class="col-md-offset-4">Neural Networks:</h2>
+  <p>With increase in number of iterations, accuracy is increasing. But after 55 iterations accuracy is reduced. It is overfitting for more than 55 iterations. So, we have limited to 50 iterations. </p>
+  <p>With increase in number of images per class, there is an increase in accuracy and increase in run time. Maximum accuracy is achieved at 30 iterations for 2200 images.  For 2200 images at 20 iterations the execution time is around 1 hr 30 min and for 500 images at 40 iterations is 2 hours. At 50 hidden nodes. If we increase the hidden layers to 100 the accuracy is reduced by 10%.  Here is a sample output for the neural Network implementation on Hadoop cluster. </p>
+
+  <div class="col-md-offset-4">
+    <img src="project_images/neuralrun.jpg">
+    <p><strong>Output for 30 iterations and 500 images per class</strong></p>
+  </div>
  </div>
+
+ </div>
+</div>
+
+<div id="section8" class="container-fluid">
+  <h1 class="col-md-offset-4">Dependencies &amp Execution:</h1>
+
+ <div class="col-md-offset-2 col-md-8 well">
+
+ </div>
+</div>
+
+<div id="section8" class="container-fluid">
+  <h1 class="col-md-offset-5">References:</h1>
+
+ <div class="col-md-offset-2 col-md-8 well">
+
+  <p>[1] L. Fei-Fei, R. Fergus, and P. Perona. Learning generative visual models from few training examples: Anincremental bayesian approach tested on 101 object categories. Computer Vision and Image Understanding, 106(1):59–70, 2007.</p>
+  <p>[2] Boiman, Oren, Eli Shechtman, and Michal Irani. "In defense of nearest-neighbor based image classification." Computer Vision and Pattern Recognition, 2008. CVPR 2008. IEEE Conference on. IEEE, 2008.</p>
+  <p>[3] Lu, Dengsheng, and Qihao Weng. "A survey of image classification methods and techniques for improving classification performance." International journal of Remote sensing 28.5 (2007): 823-870.</p>
+  <p>[4] Guyon, Isabelle, and André Elisseeff. "An introduction to variable and feature selection." Journal of machine learning research 3.Mar (2003): 1157-1182.</p>
+  <p>[5] Phung, Son Lam, Abdesselam Bouzerdoum, and Douglas Chai. "Skin segmentation using color pixel classification: analysis and comparison." IEEE transactions on pattern analysis and machine intelligence 27.1 (2005): 148-154.</p>
+  <p>[6] Rowley, Henry A., Shumeet Baluja, and Takeo Kanade. "Neural network-based face detection." IEEE Transactions on pattern analysis and machine intelligence 20.1 (1998): 23-38.</p>
+
  </div>
 </div>
 
