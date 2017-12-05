@@ -18,7 +18,8 @@
   #section5 {padding-top:50px;height:1950px;}
   #section6 {padding-top:50px;height:700px;}
   #section7 {padding-top:50px;height:1100px;}
-  #section8 {padding-top:50px;height: 500px;}
+  #section8 {padding-top:50px;height: 400px;}
+  #section9 {padding-top:50px;height: 500px;}
   </style>
   <script type="text/javascript">
     $(document).ready(function(){
@@ -72,7 +73,8 @@
           <li><a href="#section5">Algorithms</a></li>
           <li><a href="#section6">Results</a></li>
           <li><a href="#section7">Analysis</a></li>
-          <li><a href="#section8">References</a></li>
+          <li><a href="#section8">Requirements and Execution</a></li>
+          <li><a href="#section9">References</a></li>
         </ul>
       </div>
     </div>
@@ -339,7 +341,7 @@
   <h1 class="col-md-offset-5">Results:</h1>
 
  <div class="col-md-offset-2 col-md-8 well">
-  <div class="col-md-offset-3">
+  <div class="col-md-offset-4">
     <button id="knnbtn" class="btn btn-primary">Show KNN results</button>
      <button id="neuralbtn" class="btn btn-primary">Show Neural Network results</button>
   </div>
@@ -393,11 +395,24 @@
 </div>
 
 <div id="section8" class="container-fluid">
-  <h1 class="col-md-offset-4">Dependencies &amp Execution:</h1>
+  <h1 class="col-md-offset-4">Dependencies and Execution:</h1>
+  <div class="col-md-offset-2 col-md-8 well">
+    <p>Requirements to execute the code are:</p>
+    <ul>
+      <li><strong>Numpy</strong></li>
+      <li><strong>Pandas</strong></li>
+      <li><strong>OpenCV</strong></li>
+      <li><strong>Matplotlib</strong></li>
+      <li><strong>PIL</strong></li>
+      <li><strong>Function Tools</strong></li>
+      <li><strong>PySpark</strong></li>
+    </ul>
 
- <div class="col-md-offset-2 col-md-8 well">
+    <p>Implementations of Neural Networks and K-Nearest Neighbours are implemented in Spark. Both were programmed in Python. Execution steps to run Spark jobs are:</p>
 
- </div>
+    <p><strong>Sample code to run Neural Network file: </strong><i style="font-size: 13px">spark-submit NeuralNetwork.py &ltInput folder path&gt &ltNumber of Iterations (0-30)&gt &ltNumber of images per class&gt</i></p>
+    <p><strong>Sample code to run KNN file: </strong><i style="font-size: 13px">spark-submit KNN.py &ltInput folder path&gt &ltNumber of images per class&gt &ltNumber of Iterations (0-30)&gt</i></p> 
+  </div>
 </div>
 
 <div id="section8" class="container-fluid">
