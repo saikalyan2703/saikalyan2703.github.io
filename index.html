@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Image Classificaation in Spark</title>
+  <title>Image Classification in Spark</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -20,6 +20,7 @@
   #section7 {padding-top:50px;height:1350px;}
   #section8 {padding-top:50px;height: 450px;}
   #section9 {padding-top:50px;height: 500px;}
+  #section10 {padding-top:50px;height: 500px;}
   </style>
   <script type="text/javascript">
     $(document).ready(function(){
@@ -98,7 +99,8 @@
           <li><a href="#section5">Algorithms</a></li>
           <li><a href="#section6">Results</a></li>
           <li><a href="#section7">Analysis</a></li>
-          <li><a href="#section8">Requirements and Execution</a></li>
+          <li><a href="#section8">Challenges</a></li>
+          <li><a href="#section9">Requirements and Execution</a></li>
           <li><a href="#section9">References</a></li>
         </ul>
       </div>
@@ -694,6 +696,21 @@
 </div>
 
 <div id="section8" class="container-fluid">
+  <h1 class="col-md-offset-5">Challenges:</h1>
+
+ <div class="col-md-offset-2 col-md-8 well">
+    <ol>
+      <li><h4>Selecting important features (Face and Hands) in the image is tricky.</h4></li>
+      <li><h4>Detecting eyes is important to reduce the unwanted features in the face. But it is difficult because of side angle faces and glasses.</h4></li>
+      <li><h4>For time concern, we have fixed the learning rate as 0.01 in Neural Network algorithm.</h4></li>
+      <li><h4>We have tried to learn where over-fitting occurs. But it is very time consuming process to run the algorithm more than 60 iterations. So we could not find where over fitting occurs.</h4></li>
+      <li><h4>It is very time consuming to run the Neural network with more than 100 hidden layers. So, we have changed hidden layers from 10-100</h4></li>
+      <li><h4>As it is very time taking to run KNN algorithm for the full size images, we have resized the image to 50x50.</h4></li>
+    </ol>
+ </div>
+</div>
+
+<div id="section9" class="container-fluid">
   <h1 class="col-md-offset-4">Dependencies and Execution:</h1>
   <div class="col-md-offset-2 col-md-8 well">
     <p>Requirements to execute the code are:</p>
@@ -715,7 +732,7 @@
   </div>
 </div>
 
-<div id="section9" class="container-fluid">
+<div id="section10" class="container-fluid">
   <h1 class="col-md-offset-5">References:</h1>
 
  <div class="col-md-offset-2 col-md-8 well">
