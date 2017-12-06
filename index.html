@@ -14,8 +14,8 @@
   #section1 {padding-top:50px;height:250px;}
   #section2 {padding-top:50px;height:800px;}
   #section3 {padding-top:50px;height:1600px;}
-  #section4 {padding-top:50px;height:1500px;}
-  #section5 {padding-top:50px;height:2000px;}
+  #section4 {padding-top:50px;height:1600px;}
+  #section5 {padding-top:50px;height:1900px;}
   #section6 {padding-top:50px;height:1250px;}
   #section7 {padding-top:50px;height:1350px;}
   #section8 {padding-top:50px;height: 450px;}
@@ -258,7 +258,7 @@
 <div id="section4" class="container-fluid">
   <h1 class="col-md-offset-5">Preprocessing</h1>
  <div class="col-md-offset-1 col-md-10 well">
-    <p>Applying machine learning algorithms directly on raw images does not give positive results. So images must be pre-processes before using them for training.</p>
+    <p>Applying machine learning algorithms directly on raw images does not give positive results. So images must be pre-processed before using them for training.</p>
     <p>Some of the pre-processing steps for any type of image classification are mentioned below.</p>
     <div class="row">
       <div class="col-md-6">
@@ -269,6 +269,8 @@
          <p><span style="font-size: 15px" class="label label-default">Aplying Grey scale and Bulrring techniques to the images:</span></p>
           <img height="250" width="350" src="project_images/original.jpg">
       </div><br><br>
+    </div><br>
+    <div class="row">
       <div class="col-md-6">
         <p><span style="font-size: 15px" class="label label-default">Aplying Edge Detection to the images:</span></p>
           <img height="250" width="350" src="project_images/edge.jpg">
@@ -277,6 +279,8 @@
         <p><span style="font-size: 15px" class="label label-default">Using key point descriptors to identify edges.</span></p>
           <img height="250" width="350" src="project_images/key.jpg">
       </div><br>
+    </div><br>
+    <div class="row">
       <div class="col-md-6">
         <p><span style="font-size: 15px" class="label label-default">Cropping the images.</span></p>
           <img height="250" width="350" src="project_images/Cropped.jpg">
@@ -285,7 +289,6 @@
         <p><span style="font-size: 15px" class="label label-default">Applying Fore-ground reduction techniques to the images.</span></p>
           <img height="250" width="350" src="project_images/Fore.jpg">
       </div>
-
     </div>
 
     <h1 class="col-md-offset-4">Feature Engineering:</h1>
@@ -672,7 +675,7 @@
     </div>
 
     <h2 class="col-md-offset-4">K-Nearest Neighbours</h2>
-    <p>K-NN performed best for k=1 and number of images per class are 250 at 80% accuracy. As we increase the k values the accuracy reduced drastically.  Here is a sample output for k=1 and images per class=250.</p>
+    <p>K-NN performed best for k=1 and number of images per class are 250 at 80% accuracy. As we increased the k value, the accuracy reduced drastically.  Here is a sample output for k=1 and images per class=250.</p>
     <img width="700" class="col-md-offset-2" src="project_images/knnrun.jpg">
  </div>
 
