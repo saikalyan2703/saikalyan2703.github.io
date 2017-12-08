@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test results</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<style>
+	  body {
+	      position: relative; 
+	  }
+	  #section1 {padding-top:50px;height:450px;}
+	  #section2 {padding-top:50px;height:1200px;}
+	  #section3 {padding-top:50px;height:1600px;}
+	  </style>
+</head>
+<body>
+	<div id="section1" class="container-fluid">
+	  <h1 class="col-md-offset-5">Classes in dataset:</h1>
+	  <div class="col-md-offset-2 col-md-8 well">
+	    <p>The 10 classes in the training set are:</p>
+	    <ol class="col-md-offset-4">
+	      <li>0: safe driving</li>
+	      <li>1: texting - right</li>
+	      <li>2: talking on the phone - right</li>
+	      <li>3: texting - left</li>
+	      <li>4: talking on the phone - left</li>
+	      <li>5: operating the radio</li>
+	      <li>6: drinking</li>
+	      <li>7: reaching behind</li>
+	      <li>8: hair and makeup</li>
+	      <li>9: talking to passenger</li>
+	    </ol> 
+	    <p>For the test results, we have taken 12 images from the test dataset. We have applied both KNN and Neural network algorithms on the test data to analyze how the models are classifying the images.</p>
+	  </div>
+	</div>
+
+	<div id="section2" class="container-fluid">
+	  <h1 class="col-md-offset-3">Classification of test images using KNN:</h1>
+	  <div class="col-md-offset-1 col-md-10 well">
+	  	<p class="col-md-offset-3">Applied KNN algorithm to classify 12 test images using the 50 images per class in the train data.</p>
+	  	<img class="col-md-offset-3" width="700" src="project_images/knn_test.jpg"><br>	
+	  	<h3 class="col-md-offset-5">Results:</h3>
+	  	<div class="row">
+	  		<div class="col-md-4">
+	  			<p>img_100.jpg</p>
+	  			<img height="250" width="250" src="test_images/img_100.jpg">
+	  			<p><span style="font-size: 15px" class="label label-danger">Wrong Clasification (class1 : texting-right)</span></p>
+	  		</div>
+	  		<div class="col-md-4">
+	  			<p>img_32.jpg</p>
+	  			<img height="250" width="250" src="test_images/img_32.jpg">
+	  			<p><span style="font-size: 15px" class="label label-danger">Wrong Clasification (class3 : texting-left)</span></p>
+	  		</div>
+	  		<div class="col-md-4">
+	  			<p>img_33.jpg</p>
+	  			<img height="250" width="250" src="test_images/img_33.jpg">
+	  			<p><span style="font-size: 15px" class="label label-danger">Wrong Clasification (class7 : reaching behind)</span></p>
+	  		</div>
+	  	</div><br>
+
+	  	<div class="row">
+	  		<div class="col-md-4">
+	  			<p>img_39.jpg</p>
+	  			<img height="250" width="250" src="test_images/img_39.jpg">
+	  			<p><span style="font-size: 15px" class="label label-danger">Wrong Clasification (class7 : reaching behind)</span></p>
+	  		</div>
+	  		<div class="col-md-4">
+	  			<p>img_49.jpg</p>
+	  			<img height="250" width="250" src="test_images/img_49.jpg">
+	  			<p><span style="font-size: 15px" class="label label-danger">Wrong Clasification (class6 : drinking)</span></p>
+	  		</div>
+	  		<div class="col-md-4">
+	  			<p>img_58.jpg</p>
+	  			<img height="250" width="250" src="test_images/img_58.jpg">
+	  			<p><span style="font-size: 15px" class="label label-success">Correct Clasification (class6 : drinking)</span></p>
+	  		</div>
+	  	</div><br>
+
+	  	<div class="row">
+	  		<div class="col-md-4">
+	  			<p>img_62.jpg</p>
+	  			<img height="250" width="250" src="test_images/img_62.jpg">
+	  			<p><span style="font-size: 15px" class="label label-danger">Wrong Clasification (class7 : reaching behind)</span></p>
+	  		</div>
+	  		<div class="col-md-4">
+	  			<p>img_64.jpg</p>
+	  			<img height="250" width="250" src="test_images/img_64.jpg">
+	  			<p><span style="font-size: 15px" class="label label-success">Correct Clasification (class5 : operaing the radio)</span></p>
+	  		</div>
+	  		<div class="col-md-4">
+	  			<p>img_70.jpg</p>
+	  			<img height="250" width="250" src="test_images/img_70.jpg">
+	  			<p><span style="font-size: 15px" class="label label-danger">Wrong Clasification (class7 : reaching behind)</span></p>
+	  		</div>
+	  	</div><br>
+
+	  	<div class="row">
+	  		<div class="col-md-4">
+	  			<p>img_74.jpg</p>
+	  			<img height="250" width="250" src="test_images/img_74.jpg">
+	  			<p><span style="font-size: 15px" class="label label-danger">Wrong Clasification (class3 : texting left)</span></p>
+	  		</div>
+	  		<div class="col-md-4">
+	  			<p>img_80.jpg</p>
+	  			<img height="250" width="250" src="test_images/img_80.jpg">
+	  			<p><span style="font-size: 15px" class="label label-danger">Wrong Clasification (class7 : reaching behind)</span></p>
+	  		</div>
+	  		<div class="col-md-4">
+	  			<p>img_88.jpg</p>
+	  			<img height="250" width="250" src="test_images/img_88.jpg">
+	  			<p><span style="font-size: 15px" class="label label-success">Correct Clasification (class6 : drinking)</span></p>
+	  		</div>
+	  	</div><br>
+
+	  	<p> So, KNN algorithm classified 3 images correctly out of 12 test images. So accuracy here is 25%.</p>
+	  </div>
+	</div>
+
+		<div id="section3" class="container-fluid">
+	  <h1 class="col-md-offset-3">Classification of test images using Neural Networks:</h1>
+	  <div class="col-md-offset-1 col-md-10 well">
+	  	<p class="col-md-offset-3">Applied Neural Network algorithm to classify 12 test images using the 100 images per class in the train data.</p>
+	  	<img class="col-md-offset-3" width="700" src="project_images/neural_test.jpg"><br>	
+	  	<h3 class="col-md-offset-5">Results:</h3>
+	  	<div class="row">
+	  		<div class="col-md-4">
+	  			<p>img_100.jpg</p>
+	  			<img height="250" width="250" src="test_images/img_100.jpg">
+	  			<p><span style="font-size: 15px" class="label label-danger">Wrong Clasification (class1 : Texting-right)</span></p>
+	  		</div>
+	  		<div class="col-md-4">
+	  			<p>img_32.jpg</p>
+	  			<img height="250" width="250" src="test_images/img_32.jpg">
+	  			<p><span style="font-size: 15px" class="label label-danger">Wrong Clasification (class3 : texting - left)</span></p>
+	  		</div>
+	  		<div class="col-md-4">
+	  			<p>img_33.jpg</p>
+	  			<img height="250" width="250" src="test_images/img_33.jpg">
+	  			<p><span style="font-size: 15px" class="label label-danger">Wrong Clasification (class7 : reaching behind)</span></p>
+	  		</div>
+	  	</div><br>
+
+	  	<div class="row">
+	  		<div class="col-md-4">
+	  			<p>img_39.jpg</p>
+	  			<img height="250" width="250" src="test_images/img_39.jpg">
+	  			<p><span style="font-size: 15px" class="label label-success">Correct Clasification (class1 : texting - right)</span></p>
+	  		</div>
+	  		<div class="col-md-4">
+	  			<p>img_49.jpg</p>
+	  			<img height="250" width="250" src="test_images/img_49.jpg">
+	  			<p><span style="font-size: 15px" class="label label-danger">Wrong Clasification (class8 : hair and makeup)</span></p>
+	  		</div>
+	  		<div class="col-md-4">
+	  			<p>img_58.jpg</p>
+	  			<img height="250" width="250" src="test_images/img_58.jpg">
+	  			<p><span style="font-size: 15px" class="label label-danger">Wrong Clasification (class1 :  texting - right)</span></p>
+	  		</div>
+	  	</div><br>
+
+	  	<div class="row">
+	  		<div class="col-md-4">
+	  			<p>img_62.jpg</p>
+	  			<img height="250" width="250" src="test_images/img_62.jpg">
+	  			<p><span style="font-size: 15px" class="label label-danger">Wrong Clasification (class1 : texting - right)</span></p>
+	  		</div>
+	  		<div class="col-md-4">
+	  			<p>img_64.jpg</p>
+	  			<img height="250" width="250" src="test_images/img_64.jpg">
+	  			<p><span style="font-size: 15px" class="label label-success">Correct Clasification (class5 : operating the radio)</span></p>
+	  		</div>
+	  		<div class="col-md-4">
+	  			<p>img_70.jpg</p>
+	  			<img height="250" width="250" src="test_images/img_70.jpg">
+	  			<p><span style="font-size: 15px" class="label label-danger">Wrong Clasification (class1 : texting - right)</span></p>
+	  		</div>
+	  	</div><br>
+
+	  	<div class="row">
+	  		<div class="col-md-4">
+	  			<p>img_74.jpg</p>
+	  			<img height="250" width="250" src="test_images/img_74.jpg">
+	  			<p><span style="font-size: 15px" class="label label-success">Correct Clasification (class9 : talking to passenger)</span></p>
+	  		</div>
+	  		<div class="col-md-4">
+	  			<p>img_80.jpg</p>
+	  			<img height="250" width="250" src="test_images/img_80.jpg">
+	  			<p><span style="font-size: 15px" class="label label-danger">Wrong Clasification (class0 :  safe driving)</span></p>
+	  		</div>
+	  		<div class="col-md-4">
+	  			<p>img_88.jpg</p>
+	  			<img height="250" width="250" src="test_images/img_88.jpg">
+	  			<p><span style="font-size: 15px" class="label label-danger">Wrong Clasification (class1 :  texting - right)</span></p>
+	  		</div>
+	  	</div><br>
+
+	  	<p> So, Neural Network algorithm classified 3 images correctly out of 12 test images. So accuracy here is 25%.</p>
+
+	  	<div class="row">
+	  		<div class="col-md-6">
+	  			<img height="250" width="450" src="project_images/itr10im100.jpg">
+	  		</div>
+	  		<div class="col-md-6">
+	  			<img height="250" width="450" src="project_images/itr10im100nocolor.jpg">
+	  		</div>
+	  		<p> The performance of the model is increased for images which used the pixels and Histogram of colors as features increased the accuracy by 2% for 100 images per class </p>
+	  	</div><br>
+
+	  	<div class="row">
+	  		<div class="col-md-6">
+	  			<img height="250" width="450" src="project_images/hits2.jpg">
+	  		</div>
+	  		<div class="col-md-6">
+	  			<img height="250" width="450" src="project_images/hist1.jpg">
+	  		</div>
+	  		<p> The performance of the model is increased for images which used the pixels and Histogram of colors as features increased the accuracy by 10% for 500 images per class with 20 iterations</p>	  		
+	  	</div>
+	  </div>
+	</div>
+</body>
+</html>

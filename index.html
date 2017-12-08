@@ -302,7 +302,7 @@
           <img src="project_images/segmentation.png">
         </div>
         <div class="col-md-6">
-          <p>Resizing the image to 50 x 50 for the easy processing.</p>
+          <p>Resizing the image to 50 x 50 for the easy processing. Which resulted in 2500 features which are pixels with grey sclase range in each pixel and we have used histograms of colors for each image which has 512 additional featurs.</p>
      <img src="project_images/resize.png">
         </div>
     </div>
@@ -319,7 +319,7 @@
   
     <img class="col-md-offset-3" src="project_images/network.png" width="400"><br><br>
 
-    <p><strong>Input layer: </strong>It is input for the model where it learns from the given input data. Each input network is given a weight along with the inputs. The inputs are 50X50 pixels and weights are randomly initialized with matrix size input neurons by number of Hidden neurons.</p>
+    <p><strong>Input layer: </strong>It is input for the model where it learns from the given input data. Each input network is given a weight along with the inputs. The inputs are 50X50 pixels and weights are randomly initialized with matrix size input neurons by number of Hidden neurons. For input we used 3012 attributes.</p>
 
     <p><strong>Hidden layer: </strong>These units are in between input and output layers, it’s job is to transform the input features by using the Error functions or weighted functions that are used by the Output layer. </p>
 
@@ -371,7 +371,7 @@
 </div>
 
 <div id="section6" class="container-fluid">
-  <h1 class="col-md-offset-5">Results:</h1>
+  <h1 class="col-md-offset-3">Results:<a target="_blank" href="test_results.html">(Look at the classification of test images)</a> </h1>
 
  <div class="col-md-offset-2 col-md-8 well">
   <div class="col-md-offset-4">
