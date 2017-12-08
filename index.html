@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Image Classificaation in Spark</title>
+  <title>Image Classification in Spark</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -14,20 +14,45 @@
   #section1 {padding-top:50px;height:250px;}
   #section2 {padding-top:50px;height:800px;}
   #section3 {padding-top:50px;height:1600px;}
-  #section4 {padding-top:50px;height:1500px;}
-  #section5 {padding-top:50px;height:1950px;}
+  #section4 {padding-top:50px;height:1600px;}
+  #section5 {padding-top:50px;height:2150px;}
   #section6 {padding-top:50px;height:1250px;}
-  #section7 {padding-top:50px;height:1100px;}
+  #section7 {padding-top:50px;height:1350px;}
   #section8 {padding-top:50px;height: 450px;}
   #section9 {padding-top:50px;height: 500px;}
+  #section10 {padding-top:50px;height: 500px;}
   </style>
   <script type="text/javascript">
     $(document).ready(function(){
+      $('body').scrollspy({target: ".navbar", offset: 50});   
+
+        // Add smooth scrolling on all links inside the navbar
+  $("#myNavbar a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }  // End if
+  });
+
+
        $("#knn-table").hide();
        $("#knn-analysis").hide();
 
       $("#knnbtn").click(function(){
-        $("#section6").css("height","1000px");
         $("#knn-table").show();
         $("#neural-table").hide();
       });
@@ -46,7 +71,6 @@
 
 
       $("#neuralbtn").click(function(){
-        $("#section6").css("height","1250px");
         $("#knn-table").hide();
         $("#neural-table").show();
       });
@@ -75,7 +99,8 @@
           <li><a href="#section5">Algorithms</a></li>
           <li><a href="#section6">Results</a></li>
           <li><a href="#section7">Analysis</a></li>
-          <li><a href="#section8">Requirements and Execution</a></li>
+          <li><a href="#section8">Challenges</a></li>
+          <li><a href="#section9">Requirements and Execution</a></li>
           <li><a href="#section9">References</a></li>
         </ul>
       </div>
@@ -119,13 +144,13 @@
   <h1 class="col-md-offset-5">Project Group</h1>
 
   <div class="card col-md-4">
-  <img class="card-img-top col-md-offset-3" src="saikalyan.png" alt="Card image cap" width="150px" height="170px">
+  <img class="card-img-top img-circle col-md-offset-3" src="saikalyan.png" alt="Card image cap" width="150px" height="170px">
   <div class="card-block">
     <h4 class="card-title">Saikalyan Yeturu</h4>
     <div class="card-text col-md-8">
        <div class="progress">
       <div class="progress-bar" role="progressbar" aria-valuenow="50"
-      aria-valuemin="0" aria-valuemax="100" style="width:40%">
+      aria-valuemin="0" aria-valuemax="100" style="width:45%">
         Preprocessing 25%
       </div>
     </div>
@@ -139,14 +164,14 @@
 
     <div class="progress">
       <div class="progress-bar" role="progressbar" aria-valuenow="40"
-      aria-valuemin="0" aria-valuemax="100" style="width:40%">
+      aria-valuemin="0" aria-valuemax="100" style="width:45%">
         NeuralNetwork 30%
       </div>
     </div>
 
     <div class="progress">
       <div class="progress-bar" role="progressbar" aria-valuenow="30"
-      aria-valuemin="0" aria-valuemax="100" style="width:30%">
+      aria-valuemin="0" aria-valuemax="100" style="width:35%">
         Evaluation 30%
       </div>
     </div>
@@ -155,7 +180,7 @@
 </div>
 
  <div class="card col-md-4">
-  <img class="card-img-top col-md-offset-3" src="vamsi.jpg" alt="Card image cap" width="150px" height="170px">
+  <img class="card-img-top img-circle col-md-offset-3" src="vamsi.jpg" alt="Card image cap" width="150px" height="170px">
   <div class="card-block">
     <h4 class="card-title">Vamsi Krishna Kovuru</h4>
     <div class="card-text col-md-8">
@@ -176,7 +201,7 @@
 
     <div class="progress">
       <div class="progress-bar" role="progressbar" aria-valuenow="40"
-      aria-valuemin="0" aria-valuemax="100" style="width:40%">
+      aria-valuemin="0" aria-valuemax="100" style="width:45%">
         NeuralNetwork 40%
       </div>
     </div>
@@ -193,13 +218,13 @@
 </div>
 
  <div class="card col-md-4">
-  <img class="card-img-top col-md-offset-3" src="vivek.jpg" alt="Card image cap"width="150px" height="170px">
+  <img class="card-img-top img-circle col-md-offset-3" src="vivek.jpg" alt="Card image cap"width="150px" height="170px">
   <div class="card-block">
     <h4 class="card-title">Vivekananda Adepu</h4>
     <div class="card-text col-md-8">
          <div class="progress">
       <div class="progress-bar" role="progressbar" aria-valuenow="50"
-      aria-valuemin="0" aria-valuemax="100" style="width:40%">
+      aria-valuemin="0" aria-valuemax="100" style="width:45%">
         Preprocessing 25%
       </div>
     </div>
@@ -213,14 +238,14 @@
 
     <div class="progress">
       <div class="progress-bar" role="progressbar" aria-valuenow="40"
-      aria-valuemin="0" aria-valuemax="100" style="width:40%">
+      aria-valuemin="0" aria-valuemax="100" style="width:45%">
         NeuralNetwork 30%
       </div>
     </div>
 
     <div class="progress">
       <div class="progress-bar" role="progressbar" aria-valuenow="30"
-      aria-valuemin="0" aria-valuemax="100" style="width:30%">
+      aria-valuemin="0" aria-valuemax="100" style="width:35%">
         Evaluation 30%
       </div>
     </div>
@@ -233,7 +258,7 @@
 <div id="section4" class="container-fluid">
   <h1 class="col-md-offset-5">Preprocessing</h1>
  <div class="col-md-offset-1 col-md-10 well">
-    <p>Applying machine learning algorithms directly on raw images does not give positive results. So images must be pre-processes before using them for training.</p>
+    <p>Applying machine learning algorithms directly on raw images does not give positive results. So images must be pre-processed before using them for training.</p>
     <p>Some of the pre-processing steps for any type of image classification are mentioned below.</p>
     <div class="row">
       <div class="col-md-6">
@@ -244,6 +269,8 @@
          <p><span style="font-size: 15px" class="label label-default">Aplying Grey scale and Bulrring techniques to the images:</span></p>
           <img height="250" width="350" src="project_images/original.jpg">
       </div><br><br>
+    </div><br>
+    <div class="row">
       <div class="col-md-6">
         <p><span style="font-size: 15px" class="label label-default">Aplying Edge Detection to the images:</span></p>
           <img height="250" width="350" src="project_images/edge.jpg">
@@ -252,6 +279,8 @@
         <p><span style="font-size: 15px" class="label label-default">Using key point descriptors to identify edges.</span></p>
           <img height="250" width="350" src="project_images/key.jpg">
       </div><br>
+    </div><br>
+    <div class="row">
       <div class="col-md-6">
         <p><span style="font-size: 15px" class="label label-default">Cropping the images.</span></p>
           <img height="250" width="350" src="project_images/Cropped.jpg">
@@ -260,7 +289,6 @@
         <p><span style="font-size: 15px" class="label label-default">Applying Fore-ground reduction techniques to the images.</span></p>
           <img height="250" width="350" src="project_images/Fore.jpg">
       </div>
-
     </div>
 
     <h1 class="col-md-offset-4">Feature Engineering:</h1>
@@ -274,7 +302,7 @@
           <img src="project_images/segmentation.png">
         </div>
         <div class="col-md-6">
-          <p>Resizing the image to 50 x 50 for the easy processing.</p>
+          <p>Resizing the image to 50 x 50 for the easy processing. Which resulted in 2500 features which are pixels with grey sclase range in each pixel and we have used histograms of colors for each image which has 512 additional featurs.</p>
      <img src="project_images/resize.png">
         </div>
     </div>
@@ -291,7 +319,7 @@
   
     <img class="col-md-offset-3" src="project_images/network.png" width="400"><br><br>
 
-    <p><strong>Input layer: </strong>It is input for the model where it learns from the given input data. Each input network is given a weight along with the inputs. The inputs are 50X50 pixels and weights are randomly initialized with matrix size input neurons by number of Hidden neurons.</p>
+    <p><strong>Input layer: </strong>It is input for the model where it learns from the given input data. Each input network is given a weight along with the inputs. The inputs are 50X50 pixels and weights are randomly initialized with matrix size input neurons by number of Hidden neurons. For input we used 3012 attributes.</p>
 
     <p><strong>Hidden layer: </strong>These units are in between input and output layers, it’s job is to transform the input features by using the Error functions or weighted functions that are used by the Output layer. </p>
 
@@ -302,14 +330,14 @@
     <div class="col-md-offset-5">
       <h4>a1=xW1+b1</h4>
       <h4>z1=sigmoid(a1)</h4>
-    </div>
+    </div><br>
 
     <p>The activation functions are applied to the intermediate output z1. The weights W1 and W2 transform the data in between the layers. The output predicted form the forward propagation is calculated using the hidden layer weight and the output generated by the hidden layer. </p>
 
     <div class="col-md-offset-5">
       <h4>a2=z1W2+b2</h4>
       <h4>y(pred)=Softmax(a2)</h4>
-    </div>
+    </div><br>
 
     <p><strong>Backward Propagation:  </strong>For backward propagation each output predicted is compared to the training label and the error is calculated and is used in gradient descent algorithm to improve the model.  The loss is used to learn the weights of the model.</p>
 
@@ -317,8 +345,11 @@
 
     <div class="col-md-offset-5">
       <h4>loss=y(pred)-y</h4>
+      <h4>δW1=loss.z1</h4>
       <h4>δ2=(1-〖tanhz1〗^2 ).(W1.loss)</h4>
-    </div>
+      <h4>δW2=δ2.x</h4>
+    </div><br>
+    <img class="col-md-offset-3" src="project_images/out.jpg" alt="distances"><br>
 
     <p>The weights are updated by using the formulas:</p>
 
@@ -334,13 +365,13 @@
     <h2 class="col-md-offset-4">K-Nearest Neighbours:</h2>
     <p>K-NN classification, the output is a Classified based on the nearest neighbors to the given data point. For k=1 the classifier considers only single nearest data point to determine the class. For K=n point closer to the n data points in the dataset. It is best model to interpret the output, with less calculation times and best prediction power compared to different models. </p>
     
-    <img class="col-md-offset-4" src="project_images/distances.jpg">
+    <img class="col-md-offset-4" src="project_images/distances.JPG" alt="distances">
     <p>For each image the distance using Euclidean distance and Manhattan distance for each training image is calculated and determine the nearest neighbors for each test data.</p>
  </div>
 </div>
 
 <div id="section6" class="container-fluid">
-  <h1 class="col-md-offset-5">Results:</h1>
+  <h1 class="col-md-offset-3">Results:<a target="_blank" href="test_results.html">(Look at the classification of test images)</a> </h1>
 
  <div class="col-md-offset-2 col-md-8 well">
   <div class="col-md-offset-4">
@@ -640,20 +671,22 @@
      <button id="neuralrunbtn" class="btn btn-primary">Show Neural Network Analysis</button>
   </div>
    <div id="knn-analysis">
-    <div class="col-md-offset-2">
+    <div>
       <h2 class="col-md-offset-4">KNN Analysis:</h2>
-       <iframe src="knnanalysis.html" width="700" height="500"></iframe>
+       <!-- <iframe src="knnanalysis.html" width="700" height="500"></iframe> -->
+       <div class='tableauPlaceholder' id='viz1512534303993' style='position: relative'><noscript><a href='#'><img alt='K-Nearest Neighbours Performance ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;KN&#47;KNN_2&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='KNN_2&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;KN&#47;KNN_2&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1512534303993');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
     </div>
 
     <h2 class="col-md-offset-4">K-Nearest Neighbours</h2>
-    <p>K-NN performed best for k=1 and number of images per class are 250 at 80% accuracy. As we increase the k values the accuracy reduced drastically.  Here is a sample output for k=1 and images per class=250.</p>
+    <p>K-NN performed best for k=1 and number of images per class are 250 at 80% accuracy. As we increased the k value, the accuracy reduced drastically.  Here is a sample output for k=1 and images per class=250.</p>
     <img width="700" class="col-md-offset-2" src="project_images/knnrun.jpg">
  </div>
 
  <div id="neural-analysis">
-    <div class="col-md-offset-2">
-      <h2 class="col-md-offset-3">Neural Network Analysis:</h2>
-      <iframe src="neuralanalysis.html" width="700" height="500"></iframe>
+    <div>
+      <h2 class="col-md-offset-4">Neural Network Analysis:</h2>
+      <!-- <iframe src="neuralanalysis.html" width="900" height="500"></iframe> -->
+      <div class='tableauPlaceholder' id='viz1512532883438' style='position: relative'><noscript><a href='#'><img alt='Neural Network Performance ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;M7&#47;M74XKDRT5&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;M74XKDRT5' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;M7&#47;M74XKDRT5&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1512532883438');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
     </div>
     <h2 class="col-md-offset-4">Neural Networks:</h2>
   <p>With increase in number of iterations, accuracy is increasing. But after 55 iterations accuracy is reduced. It is overfitting for more than 55 iterations. So, we have limited to 50 iterations. </p>
@@ -669,6 +702,21 @@
 </div>
 
 <div id="section8" class="container-fluid">
+  <h1 class="col-md-offset-5">Challenges:</h1>
+
+ <div class="col-md-offset-2 col-md-8 well">
+    <ol>
+      <li><h4>Selecting important features (Face and Hands) in the image is tricky.</h4></li>
+      <li><h4>Detecting eyes is important to reduce the unwanted features in the face. But it is difficult because of side angle faces and glasses.</h4></li>
+      <li><h4>For time concern, we have fixed the learning rate as 0.01 in Neural Network algorithm.</h4></li>
+      <li><h4>We have tried to learn where over-fitting occurs. But it is very time consuming process to run the algorithm more than 60 iterations. So we could not find where over fitting occurs.</h4></li>
+      <li><h4>It is very time consuming to run the Neural network with more than 100 hidden layers. So, we have changed hidden layers from 10-100</h4></li>
+      <li><h4>As it is very time taking to run KNN algorithm for the full size images, we have resized the image to 50x50.</h4></li>
+    </ol>
+ </div>
+</div>
+
+<div id="section9" class="container-fluid">
   <h1 class="col-md-offset-4">Dependencies and Execution:</h1>
   <div class="col-md-offset-2 col-md-8 well">
     <p>Requirements to execute the code are:</p>
@@ -678,24 +726,19 @@
       <li><strong>OpenCV</strong></li>
       <li><strong>Matplotlib</strong></li>
       <li><strong>PIL</strong></li>
-      <li><strong>FuncTools</strong></li>
+      <li><strong>Function Tools</strong></li>
       <li><strong>PySpark</strong></li>
     </ul>
 
     <p>Implementations of Neural Networks and K-Nearest Neighbours are implemented in Spark. Both were programmed in Python. Execution steps to run Spark jobs are:</p>
 
-<<<<<<< HEAD
     <p><strong>Sample code to run Neural Network file: </strong><i style="font-size: 13px">spark-submit NeuralNetwork.py &ltInput folder path&gt &ltNumber of Iterations (0-30)&gt &ltNumber of images per class&gt</i></p>
     <p><strong>Sample code to run KNN file: </strong><i style="font-size: 13px">spark-submit KNN.py &ltInput folder path&gt &ltNumber of images per class&gt &ltValue of k &gt</i></p> 
     <p><strong>Sample code to run Preprocessing file: </strong><i style="font-size: 13px">spark-submit Preprocess.py &ltInput folder path&gt</i></p> 
-=======
-    <p><strong>Sample code to run Neural Network file: </strong><i style="font-size: 13px">spark-submit NeuralNetwork.py &ltInput folder path&gt &ltNumber of Iterations (0-30)&gt &ltNumber of images per class&gt &ltNumber of Hidden nodes (0-100)&gt</i></p>
-    <p><strong>Sample code to run KNN file: </strong><i style="font-size: 13px">spark-submit KNN.py &ltInput folder path&gt &ltNumber of images per class&gt &ltNumber of Iterations (0-30)&gt</i></p> 
->>>>>>> ce36f2a74ab93f728b8fe5313a6113c6ffacf816
   </div>
 </div>
 
-<div id="section9" class="container-fluid">
+<div id="section10" class="container-fluid">
   <h1 class="col-md-offset-5">References:</h1>
 
  <div class="col-md-offset-2 col-md-8 well">
